@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gtag</title>
+
+    <!-- 예시 코드 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213814403-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-숫자'); // GA 추적태그, 기획자가 전달해주는 것을 /head 위에 복사 붙여넣기 한다.
+    </script>
+</head>
+
+<style>
+    img { display: block; height: 280px; }
+</style>
+
+<body>
+    <h2>기획자가 전달해주는 gtag 라벨 값 예시</h2>
+    <img src="./image/gtag1.PNG" alt="GTAG">
+    <img src="./image/gtag2.PNG" alt="GTAG">
+
+    <p>
+        event_category에 category 명을 작성하고, event_label에 label 명을 작성한다. <br>
+        <strong>ex) onclick="gtag('event', 'click', { 'event_category' : 'Menu', 'event_label' : '이벤트 참여하기'});"</strong>
+    </p>
+    
+    <!-- 예시 코드 -->
+    <button class="btn-event"><a href="#none" onclick="gtag('event', 'click', { 'event_category' : 'Menu', 'event_label' : '이벤트 참여하기'});">이벤트 참여하기</a></button>
+</body>
+</html>

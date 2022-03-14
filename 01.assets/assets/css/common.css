@@ -1,0 +1,649 @@
+/* common.css */
+/*
+* File		: reset.css
+* Author    : kimyoubin
+* Version	: 1.0
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, time, figure, article, nav, header, footer, hgroup, video, audio, aside, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Apple SD Gothic Neo', 'Dotum', arial, Sans-serif;
+  color: #000;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+dl, ul, ol, menu, li {
+  list-style: none;
+}
+
+fieldset, img {
+  border: 0 none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table caption {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+figure, article, header, footer, nav, hgroup, video, audio, aside, main {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:active, a:hover, a:focus {
+  text-decoration: none;
+}
+
+address, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: normal;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input, select, textarea, button {
+  vertical-align: middle;
+  color: inherit;
+  resize: none;
+}
+
+/* INPUT */
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=search],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  font-family: inherit;
+  line-height: inherit;
+  border: none;
+}
+
+input[type=radio] {
+  border-radius: 100%;
+}
+
+input[type=submit], input[type=button], button {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* PLACEHOLDER */
+::-webkit-input-placeholder {
+  font-family: inherit;
+  color: #888;
+}
+
+::-moz-placeholder {
+  font-family: inherit;
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  font-family: inherit;
+  color: #888;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+/* HTML5 RESET */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, video {
+  display: block;
+}
+
+address, caption, em, i {
+  font-style: normal;
+  font-weight: normal;
+}
+
+iframe, embed, object, video {
+  max-width: 100%;
+}
+
+/* IPHONE */
+input:disabled, textarea:disabled {
+  opacity: 1;
+  -webkit-text-fill-color: inherit;
+}
+
+input[type="text"], input[type="password"], textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* ie input icon remove */
+input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* hidden */
+.hide {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* skipnavi */
+#skip-navi a {
+  position: absolute;
+  left: -3000%;
+}
+
+#skip-navi a:focus {
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 10000000000;
+  width: 100%;
+  line-height: 60px;
+  background: #fff;
+  color: #000;
+  font-family: 'LGL';
+  text-align: center;
+  outline: none;
+}
+
+/*
+* File		: com.css
+* Author    : kimyoubin
+* Version	: 1.0
+*/
+/* Montserrat */
+/* Noto Sans KR */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../font/NotoSansKR-Thin.eot");
+  src: local("Noto Sans KR Thin"), local("Noto Sans Thin"), local("NotoSansKR-Thin"), url("../font/NotoSansKR-Thin.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Thin.woff2") format("woff2"), url("../font/NotoSansKR-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans KR Light"), local("Noto Sans Light"), local("NotoSansKR-Light"), url("../font/NotoSansKR-Light.woff2") format("woff2"), url("../font/NotoSansKR-Light.woff") format("woff"), url("../font/NotoSansKR-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/NotoSansKR-Regular.eot");
+  src: local("Noto Sans KR"), local("Noto Sans Regular"), local("NotoSansKR-Regular"), url("../font/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Regular.woff2") format("woff2"), url("../font/NotoSansKR-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/NotoSansKR-Medium.eot");
+  src: local("Noto Sans KR Medium"), local("Noto Sans Medium"), local("NotoSansKR-Medium"), url("../font/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Medium.woff2") format("woff2"), url("../font/NotoSansKR-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/NotoSansKR-Bold.eot");
+  src: local("Noto Sans KR Bold"), local("Noto Sans Bold"), local("NotoSansKR-Bold"), url("../font/NotoSansKR-Bold.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Bold.woff2") format("woff2"), url("../font/NotoSansKR-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../font/NotoSansKR-Black.eot");
+  src: local("Noto Sans KR Black"), local("Noto Sans Black"), local("NotoSansKR-Black"), url("../font/NotoSansKR-Black.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Black.woff2") format("woff2"), url("../font/NotoSansKR-Black.woff") format("woff");
+}
+
+html,
+body {
+  font-family: 'NotoSansKR', sans-serif;
+  font-weight: 300;
+  letter-spacing: -.4px;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+}
+
+/*
+* File		: button.css
+* Author    : kimyoubin
+* Version	: 1.0
+*/
+[class^="btn"] {
+  width: 150px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border: 1px solid #e9e9e9;
+}
+
+/*
+* File		: icon.css
+* Author    : kimyoubin
+* Version	: 1.0
+*/
+.ico-close.type2 {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+}
+
+.ico-close.type2::before, .ico-close.type2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 21px;
+  height: 2px;
+  background-color: #666;
+}
+
+.ico-close.type2::before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ico-close.type2::after {
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.ico-triangle.down {
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+
+.ico-triangle.down::before {
+  content: '';
+  display: block;
+  border-top: 15px solid #000;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.ico-triangle.right {
+  display: inline-block;
+  width: 30px;
+  height: 50px;
+}
+
+.ico-triangle.right::before {
+  content: '';
+  display: block;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 30px solid #333;
+}
+
+.ico-bullet.down {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  overflow: hidden;
+}
+
+.ico-bullet.down::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  margin-top: -4px;
+  border-right: 5px solid #222;
+  border-bottom: 5px solid #222;
+}
+
+.ico-bullet.right {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.ico-bullet.right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  -webkit-transform: translate(-50%, -50%) scale(1.33333, 1) rotate(45deg);
+  transform: translate(-50%, -50%) scale(1.33333, 1) rotate(45deg);
+  margin-left: -7px;
+  border-top: 3px solid #222;
+  border-right: 3px solid #222;
+}
+
+.ico-arrow.left {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+}
+
+.ico-arrow.left:before {
+  content: '';
+  position: absolute;
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  left: 10px;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.ico-arrow.left:after {
+  content: '';
+  position: absolute;
+  background-color: #333;
+  top: 50%;
+  left: 1px;
+  width: 29px;
+  height: 2px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.ico-hamburger {
+  position: relative;
+  display: block;
+  margin: 9px 0;
+}
+
+.ico-hamburger, .ico-hamburger:before, .ico-hamburger:after {
+  width: 20px;
+  height: 3px;
+  background-color: #333;
+}
+
+.ico-hamburger:before, .ico-hamburger:after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.ico-hamburger:before {
+  top: -9px;
+}
+
+.ico-hamburger:after {
+  top: 9px;
+}
+
+/*
+* File		: guide.css
+* Author    : kimyoubin
+* Version	: 1.0
+*/
+.guide header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 30px;
+  font-family: 'Montserrat';
+  color: #fff;
+  background-color: #ff5f45;
+  z-index: 100;
+}
+
+.guide header h1 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.guide header p {
+  font-size: 17px;
+}
+
+.guide nav {
+  position: fixed;
+  left: 0;
+  top: 117px;
+  width: 200px;
+  height: 100%;
+  background: #f4f6f7;
+  border-right: 1px solid #e7e8e9;
+}
+
+.guide nav ul {
+  padding: 20px 0;
+}
+
+.guide nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 30px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.guide nav ul li a {
+  position: relative;
+}
+
+.guide nav ul li a.on {
+  color: #ff5f45;
+}
+
+.guide nav ul li a.on::before {
+  display: block;
+}
+
+.guide nav ul li a::before {
+  content: '';
+  position: absolute;
+  display: none;
+  width: 3px;
+  height: 100%;
+  left: -10px;
+  background-color: #ff5f45;
+}
+
+.guide section {
+  height: 100vh;
+  margin-bottom: 200px;
+}
+
+.guide .content {
+  padding-left: 200px;
+  padding-top: 117px;
+}
+
+.guide .content .wrap {
+  padding: 30px;
+}
+
+.guide .content h2 {
+  text-indent: -9999px;
+}
+
+.guide .content h3 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid #f4f6f7;
+}
+
+.guide .content .list {
+  margin-bottom: 80px;
+}
+
+.guide .content .list .bullet li {
+  position: relative;
+  padding-left: 10px;
+}
+
+.guide .content .list .bullet li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 5px;
+  height: 5px;
+  background-color: #333;
+  border-radius: 0;
+}
+
+.guide .content .code-copy {
+  text-align: left;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  letter-spacing: 1px;
+  background-color: #f4f6f7;
+}
+
+.guide .content .palette {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.guide .content .palette li {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  letter-spacing: 0;
+}
+
+.guide .content .palette li.color1 {
+  background-color: #d6d6d6;
+}
+
+.guide .content .palette li.color2 {
+  background-color: #a7a7a7;
+}
+
+.guide .content .palette li.color3 {
+  background-color: #848484;
+}
+
+.guide .content .palette li.color4 {
+  background-color: #676767;
+}
+
+.guide .content .palette li.color5 {
+  background-color: #575757;
+}
+
+.guide .content .palette li p {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=common.css.map */

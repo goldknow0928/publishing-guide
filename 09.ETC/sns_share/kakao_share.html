@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오톡 공유하기</title>
+    <!-- kakao dev script -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+</head>
+<body>
+
+    <!-- 사용할 카카오톡 공유하기 버튼 -->
+    <a href="javascript:sendLink()">
+        <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+    </a>
+
+<script>
+
+    Kakao.init('자바스크립트 키'); // 해당 애플리케이션 자바스크립트 키 ex) 2cac1a22d3b35a5c651efb456ca9dac7
+
+    function sendLink() { // 카카오톡 공유하기
+      Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '카카오 메신저 공유하기 제목',
+          description: '카카오 메신저 공유하기 설명',
+        imageUrl:'', // 서버 이미지 파일 URL 값
+        link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+        },
+      },
+      buttons: [
+        {
+          title: '공유 링크 버튼 이름', // 공유하기 버튼 이름
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+          },
+        },
+      ]
+      })
+    }
+
+</script>
+
+</body>
+</html>

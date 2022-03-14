@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS 공유하기</title>
+
+    <!-- 페이스북 메타태그 -->
+    <meta property="og:url" content= "https://cdn.fint.co.kr/finttourfesta/landing"/>
+    <meta property="og:type" content= "website"/>
+    <meta property="og:title" content= "페이스북 메타태그 타이틀을 작성해주세요."/>
+    <meta property="og:description" content= "페이스북 메타태그 디스크립션을 작성해주세요."/>
+    <meta property="og:image" content= "https://stickinteractive.github.io/fint-event/assets/image/share_facebook.jpg"/><!-- 공유할 썸네일 이미지의 절대경로 작성 -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="fb:app_id" content="252522600275458">
+
+    <!-- 트위터 메타태그 -->
+    <meta name="twitter:card" content= "photo"/><!-- 카드유형으로 summary, photo, player 3가지가 있다 -->
+    <meta name="twitter:url" content= "https://cdn.fint.co.kr/finttourfesta/landing"/>
+    <meta name="twitter:title" content= "트위터 메타태그 타이틀을 작성해주세요."/>
+    <meta name="twitter:description" content= "트위터 메타태그 타이틀을 작성해주세요."/>
+    <meta name="twitter:image" content= "https://stickinteractive.github.io/fint-event/assets/image/share_twitter.jpg"/><!-- 공유할 썸네일 이미지의 절대경로 작성 -->
+    <meta property="twitter:image:width" content="1200">
+    <meta property="twitter:image:height" content="675">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    a, a:link { color: #000; }
+    p > a { font-weight: bold; text-decoration: none; }
+    .content { display: flex; }
+    .content > div { margin-right: 100px; }
+    .facebook-share a { display: inline-block; margin-bottom: 20px; }
+    .facebook-share img { height: 50px; }
+</style>
+
+<body>
+    <div class="content">
+        <div class="facebook-share">
+            <h2>페이스북 공유하기</h2>
+
+            <div>
+                <p>
+                    방법 1: 페이스북 플러그인 이용하기 <br>
+                    아래 사이트에 접속해서 단계별 안내 따라하기
+                </p>
+                <p><a href="https://developers.facebook.com/docs/plugins/share-button?locale=ko_KR" target="_blank">FACEBOOK for Developers 사이트 링크 이동</a></p>
+                
+                <!-- 예시 코드 -->
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0&appId=252522600275458&autoLogAppEvents=1" nonce="4L0jcohH"></script>
+
+                <div class="fb-share-button" data-href="https://stickinteractive.github.io/fint-event/" data-layout="button" data-size="large">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstickinteractive.github.io%2Ffint-event%2F&amp;src=sdkpreparse">페이스북 공유하기 1</a>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    방법 2: 페이스북 API 이용하기 <br>
+                    meta tag, script 이용하기
+                </p>
+
+                <a href="#none" id="facebook-share">페이스북 공유하기 2</a>
+            </div>
+        </div>
+
+        <div class="twitter-share">
+            <h2>트위터 공유하기</h2>
+            
+            <a href="#none" id="twitter-share">트위터 공유하기</a>
+        </div>
+        
+        <div class="blog-share">
+            <h2>네이버 블로그 공유하기</h2>
+            
+            <a href="#none" id="blog-share">네이버 블로그 공유하기</a>
+        </div>
+
+        <div class="url-share">
+            <h2>URL 공유하기</h2>
+            
+            <a href="#none" id="url-share">url 공유하기</a>
+        </div>
+    </div>
+</body>
+
+<script>
+$(document).ready(function () {
+    // 방법 2: 페이스북 api 이용하기
+    $('#facebook-share').on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // encodeURIComponent('~') 해당 부분에 공유할 url 작성
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('https://stickinteractive.github.io/fint-event/'));
+    });
+
+    // 방법 2: 페이스북 api 이용하기, 페이스북 개발자 사이트에서 API 생성해서 복사 붙여넣기
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '252522600275458',
+            xfbml      : true,
+            version    : 'v12.0'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    // 트위터 공유하기
+    $('#twitter-share').on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        // encodeURIComponent('~') 해당 부분에 공유할 url 작성
+        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent('https://stickinteractive.github.io/fint-event/'));
+    });
+
+
+    // 블로그 공유하기
+    $('#blog-share').on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        // encodeURIComponent('~') 해당 부분에 공유할 url 작성
+        window.open('http://blog.naver.com/openapi/share?url=' + encodeURIComponent('https://stickinteractive.github.io/fint-event/'));
+    });
+
+
+    // url 복사하기
+    $('#url-share').on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        var url = '';
+        var textarea = document.createElement("textarea");
+
+        document.body.appendChild(textarea);
+        url = window.document.location.href;
+        textarea.value = url;
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert("링크가 복사되었습니다.")
+    });
+});
+</script>
+
+</html>

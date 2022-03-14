@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LINK PAGES</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="//stick-library.s3.ap-northeast-2.amazonaws.com/assets/css/style.bundle.css"/>
+    <style>
+        /*
+        *   부트스트랩 기반
+        *   스타일 : https://preview.keenthemes.com/metronic8/demo1/documentation/getting-started.html
+        */
+        .wrap {display: flex;flex-direction: column;min-height: 100vh;margin: 0px;padding: 0px;font-size: 16px !important;font-weight: 400;font-family: Poppins, Helvetica, "sans-serif";background: #eef0f8;}
+        aside {position: fixed;top: 0;bottom: 0;left: 0;width: 265px;z-index: 98;background-color: #ffffff;box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.08);}
+        aside ul {margin: 3rem;}
+        main {padding-left: 265px;}
+        main caption,main th,main td {text-align: center;}
+        main td:last-child {text-align: left;}
+        main .card.card-custom {max-width: 1200px;}
+        main .datatable.datatable-default>.datatable-table>.datatable-head .datatable-row>.datatable-cell {font-size: 16px !important;font-weight: 700;}
+        main .datatable.datatable-default>.datatable-table>.datatable-head .datatable-row>.datatable-cell:first-child,
+        main .datatable.datatable-default>.datatable-table>.datatable-body .datatable-row>.datatable-cell:first-child,
+        main .datatable.datatable-default>.datatable-table>.datatable-foot .datatable-row>.datatable-cell:first-child {width: 20%;}
+        main .datatable.datatable-default>.datatable-table>.datatable-head .datatable-row>.datatable-cell,
+        main .datatable.datatable-default>.datatable-table>.datatable-body .datatable-row>.datatable-cell,
+        main .datatable.datatable-default>.datatable-table>.datatable-foot .datatable-row>.datatable-cell {width: 33%;font-size: 14px;}
+        main .label {vertical-align: middle;}
+        .label-area {margin-top: 15px;padding-top: 15px;border-top: 1px dashed #ddd;color: #999;}
+
+        @media (max-width: 1024px) {
+            aside {width: 100%;height: 70px;}
+            aside ul {margin: 10px;}
+            main {padding: 70px 0 0 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 리스트 [s] -->
+        <aside>
+            <ul class="nav nav-tabs nav-tabs-line flex-column">
+                <li class="nav-item">
+                    <a class="nav-link m-0 active">Pages</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- 리스트 [e] -->
+        <!-- main [s] -->
+        <main class="d-flex flex-column flex-row-fluid wrapper">
+            <!-- .content [s] -->
+            <div class="content d-flex flex-column flex-column-fluid">
+                <div class="card card-custom m-10">
+                    <!-- .card-header [s] -->
+                    <div class="card-header flex-wrap border-0 pt-6 pb-0">
+                        <div class="card-title">
+                            <h3 class="card-label">
+                                PAGES LINK <span class="d-block text-muted pt-2 font-size-sm">project name</span>
+                            </h3>
+                        </div>
+                        <div>
+                            <i class="label font-weight-bold label-lg label-light-primary label-inline">modal</i>
+                            <i class="label label-inline label-light-success font-weight-bold">Style</i>
+                            <i class="label label-inline label-light-danger font-weight-bold">!</i>
+                        </div>
+                    </div>
+                    <!-- .card-header [e] -->
+                    <!-- .card-body [s] -->
+                    <div class="card-body">
+                        <div class="datatable datatable-default datatable-bordered datatable-loaded">
+                            <table class="datatable-bordered datatable-head-custom datatable-table" id="kt_datatable" style="display: block">
+                                <thead class="datatable-head">
+                                    <tr class="datatable-row">
+                                        <th class="datatable-cell">Name</th>
+                                        <th class="datatable-cell">Link</th>
+                                        <th class="datatable-cell">Memo</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="datatable-body">
+                                    <!-- tr [s] -->
+                                    <tr class="datatable-row">
+                                        <td class="datatable-cell">
+                                            Style Guide
+                                        </td>
+                                        <td class="datatable-cell">
+                                            <!-- <router-link to="StyleGuide" target="_blank">STYLEGUIDE</router-link> -->
+                                            <a href="#n" target="_blank">STYLEGUIDE</a>
+                                        </td>
+                                        <td class="datatable-cell">
+                                            <i class="label label-inline label-light-success font-weight-bold">Style</i>
+                                        </td>
+                                    </tr>
+                                    <!-- tr [e] -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- .card-body [e] -->
+                </div>
+            </div>
+            <!-- .content [e] -->
+            <!-- .footer [s] -->
+            <footer class="footer bg-white py-4 d-flex flex-lg-column">
+                <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center">
+                    <div class="text-dark order-2 order-md-1">
+                        <span class="text-muted font-weight-bold mr-2">2021©</span><span class="text-dark-75 text-hover-primary">Stick interactive</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- .footer [e] -->
+        </main>
+        <!-- main [e] -->
+    </div>
+
+    <script src="//stick-library.s3.ap-northeast-2.amazonaws.com/assets/js/scripts.bundle.min.js"></script>
+</body>
+
+</html>
