@@ -1,57 +1,86 @@
 ## **assets 폴더 구조**
 
-&nbsp;
 
-## css/
+<br>
 
-**_/ base_**
+## /css/
 
-- /css/base/\_com.scss
-- /css/base/\_reset.scss
 
-**_/ components_**
+**_base/_**
+- _com.scss
 
-- /css/components/board/
-- /css/components/button/
-- /css/components/form/
-- /css/components/list/
-- /css/components/table/
-- /css/components/popup/
-- /css/components/pagination/
+- _reset.scss
 
-**_/ helpers_**
+<br>
 
-- /css/helpers/\_media.scss
-- /css/helpers/\_mixin.scss
-- /css/helpers/\_variables.scss
+**_components/_**
 
-**_/ layouts_**
+- _icon/
 
-- /css/layouts/header/\_gnb.scss
-- /css/layouts/\_header.scss
-- /css/layouts/\_footer.scss
-- /css/layouts/\_wrapper.scss
+- _button/
 
-**_/ pages_**
+- _form/
 
-- /css/pages/common/\_common.scss
-- /css/pages/pagename/\_pagesname.scss
+- _list/
 
-**_/ vendors_**
+- _table/
 
-- /css/vendors/\_slick.scss
-- /css/vendors/\_animate.scss
+- _modal/
 
-/css/common.css (html에서 불러오는 아이)
-/css/common.scss (여기 안에 전부 import하기)
+- _pagination/
 
-&nbsp;
+<br>
 
-## font/
+**_helpers/_**
+- _media.scss
+
+- _mixin.scss
+
+- _variables.scss
+
+<br>
+  
+**_layouts/_**
+
+- _gnb.scss
+
+- _header.scss
+
+- _footer.scss
+
+- _wrapper.scss
+
+<br>
+
+**_pages/_**
+
+- _common.scss
+
+- _pagesname.scss
+
+<br>
+
+**_vendors/_**
+
+- _slick.scss
+
+- _animate.scss
+
+  <br>
+
+/css/**style.min.css**
+/css/**style.scss** (all @import)
+
+<br>
+
+ 
+## /font/
 
 **_font file_**
 
-&nbsp;
+
+<br>
+
 
 ## images/
 

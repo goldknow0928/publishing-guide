@@ -1,5 +1,13 @@
+/*
+* File		  : /components/_icon.scss
+* Author      : KAR
+* Version	  : 1.0
+* Dependence  : /helpers/_icon.scss
+* Summary	  : close, triangle, bullet, arrow, hamburger
+*/
+
 .ico-close {
-    // @include icon-close();
+    @include icon-close();
     &.type2 {
         @include icon-close(16px, 2px, #666, 10px, inline-block, relative);     
         background-color: #f4f4f4;
@@ -8,7 +16,7 @@
 }
 
 .ico-triangle {
-    // @include icon-triangle(); 
+    @include icon-triangle(); 
     &.down {
         @include icon-triangle('down', 30px, 15px, #000, inline-block); 
     }
@@ -18,7 +26,7 @@
 }
 
 .ico-bullet {
-    // @include icon-bullet(); 
+    @include icon-bullet(); 
     &.down {
         @include icon-bullet('down', 30px, 15px, 5px, #222, inline-block, relative);
     }
@@ -28,7 +36,7 @@
 }
 
 .ico-arrow {
-    // @include icon-arrow(); 
+    @include icon-arrow(); 
     &.left {
         @include icon-arrow('left', 30px, 20px, 2px, #333, inline-block, relative);
     }

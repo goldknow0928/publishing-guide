@@ -1,20 +1,20 @@
 .guide {
-    header {     
+    header {
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;   
+        right: 0;
         padding: 20px 30px;
-        font-family: 'Montserrat';
-        color: #fff;   
-        background-color: #ff5f45; 
-        z-index: 100; 
-        h1 {                    
-            font-size: 35px;   
-            font-weight: 500;                    
+        font-family: "Montserrat";
+        color: #fff;
+        background-color: #222;
+        z-index: 100;
+        h1 {
+            font-size: 35px;
+            font-weight: 500;
         }
         p {
-            font-size: 17px;                    
+            font-size: 17px;
         }
     }
 
@@ -29,27 +29,27 @@
         ul {
             padding: 20px 0;
             li {
-                @include display-flex($diplayFlexStartCenter...);
+                @include flex(flex, start, center);
                 height: 60px;
                 padding: 0 30px;
-                font-family: 'Montserrat';
+                font-family: "Montserrat";
                 font-weight: 500;
                 letter-spacing: 0;
-                
+
                 a {
                     position: relative;
 
                     &.on {
-                        color: #ff5f45;
+                        color: #222;
                         &::before {
                             display: block;
                         }
                     }
-    
+
                     &::before {
                         @include pseudo-base(none, 3px, 100%);
                         left: -10px;
-                        background-color: #ff5f45;
+                        background-color: #222;
                     }
                 }
             }
@@ -71,11 +71,11 @@
         h2 {
             text-indent: -9999px;
         }
-        
+
         h3 {
             margin-bottom: 20px;
             padding-bottom: 10px;
-            font-family: 'Montserrat';
+            font-family: "Montserrat";
             font-size: 20px;
             font-weight: 600;
             border-bottom: 2px solid #f4f6f7;
@@ -88,7 +88,7 @@
                     position: relative;
                     padding-left: 10px;
                     &::before {
-                        @include list-bullet(5px, 5px, #333, 0)
+                        @include list-bullet(5px, 5px, #333);
                     }
                 }
             }
@@ -96,40 +96,55 @@
 
         .code-copy {
             text-align: left;
-            font-family: 'Montserrat';
+            font-family: "Montserrat";
             font-size: 13px;
-            letter-spacing: 1px; 
+            letter-spacing: 1px;
             background-color: #f4f6f7;
         }
 
-        // color 
+        // color
         .palette {
-            @include display-flex($diplayInlineFlexStart...);
-            @include flex-wrap(wrap);
-            li {         
-                position: relative;    
+            @include flex(inline-flex, start, center);
+            flex-wrap: wrap;
+
+            li {
+                position: relative;
                 width: 180px;
                 height: 180px;
-                letter-spacing: 0;                
-                &.color1 { background-color: #d6d6d6; }
-                &.color2 { background-color: #a7a7a7; }
-                &.color3 { background-color: #848484; }
-                &.color4 { background-color: #676767; }
-                &.color5 { background-color: #575757; }
+                letter-spacing: 0;
+                &.color1 {
+                    background-color: #d6d6d6;
+                }
+                &.color2 {
+                    background-color: #a7a7a7;
+                }
+                &.color3 {
+                    background-color: #848484;
+                }
+                &.color4 {
+                    background-color: #676767;
+                }
+                &.color5 {
+                    background-color: #575757;
+                }
                 p {
                     position: absolute;
                     left: 20px;
                     bottom: 20px;
                     color: #fff;
-                    font-family: 'Montserrat';                    
+                    font-family: "Montserrat";
                     font-size: 15px;
                     font-weight: 500;
                     text-align: left;
                     line-height: 1.8;
-                    letter-spacing: 1px;                    
+                    letter-spacing: 1px;
                 }
             }
         }
     }
 }
 
+// ### 스타일 가이드 참고링크
+
+// 현대모비스 : http://stage-mobis.stickinteractive.com/kr/styleguide
+// 쿠첸몰 : http://stage-cuchen.stickinteractive.com/_common.html
